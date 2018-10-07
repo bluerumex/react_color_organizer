@@ -1,32 +1,22 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
 
-class AddColorForm extends Component {
-    
-    constructor(props) {
-        super(props);
-        this.submit = this.submit.bind(this);
-    }
-    
-    submit(e) {
-        const { _title, _color } = this.refs;
+const AddColorForm = ({onNewColor=f=>f}) => {
+    let _title, _color;
+    const submit = e => {
         e.preventDefault();
-        // alert(`새로운 색: ${_title.value} ${_color.value}`);
-        this.props.onNewColor(_title.value, _color.value);
+        onNewColor(_title.value, _color.value);
         _title.value = '';
         _color.value = '#000000';
         _title.focus();
     }
 
-    render() {
-        return (
-            <form onSubmit={this.submit} >
-                <input ref='_title' type='text' placeholder='color name...' required />
-                <input ref='_color' type='color' required />
-                <button>추가</button>
-            </form>
-        );
-    }
+    return (
+        <form onSubmit={submit}>
+            <input ref={input => _title = input} type='text' placeholder='color name...' required />
+            <input ref={input => _color = input} type='color' required />
+            <button>Add Color</button>
+        </form>
+    )
 }
 
 export default AddColorForm;
