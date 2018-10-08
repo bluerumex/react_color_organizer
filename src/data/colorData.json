@@ -1,0 +1,16 @@
+{
+    "colors": [
+        {
+            "id": "0175df0-a8c6-41bf-8d02-df734d829a4",
+            "title": "sunset set",
+            "color": "#00c4e2",
+            "rating": 5
+        },
+        {
+            "id": "83c7ba2f-7932-4d7d-9e23-35adbe186046",
+            "title": "lawn",
+            "color": "#26ac56",
+            "rating": 3
+        }
+    ]
+}

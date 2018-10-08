@@ -1,4 +1,5 @@
-html, body, #react-container {
+  /* 
+  html, body, #react-container {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@ html, body, #react-container {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  } */
   
   .star-rating {
     display: flex;

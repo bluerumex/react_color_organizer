@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../stylesheets/AddColorForm.scss';
 
 const AddColorForm = ({onNewColor=f=>f}) => {
     let _title, _color;

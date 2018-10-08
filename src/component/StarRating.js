@@ -1,6 +1,6 @@
 import React from 'react';
 import Star from './Star';
-import '../CSS/Rating.css'
+import '../css/Rating.css'
 
 // 표현 컴포넌트로 변경
 const StarRating = ({ starsSelected=0, totalStars=5, onRate=f=>f}) =>
