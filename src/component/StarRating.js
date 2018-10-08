@@ -48,6 +48,6 @@ class StarRating extends Component {
         )
     };
 };
- */
+*/
 
 export default StarRating;

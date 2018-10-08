@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
-import StarRating from './component/StarRating';
-
-/* 
+import ColorList from './component/ColorList';
 import AddColorForm from './component/AddColorForm'
 
-const logColor = (title, color) =>
-    console.log(`NEW COLOR: ${title} | ${color}`);
-
 class App extends Component {
-    render() {
-        return <AddColorForm onNewColor={logColor}/> 
+    constructor(props) {
+        super(props);
+        this.state = {
+            colors: []
+        }
     }
-}
-*/
-class App extends Component {
+
     render() {
-        return <StarRating />
+        const { colors } = this.state;
+        
+        return (
+            <div className="app">
+                <AddColorForm />
+                <ColorList colors={colors} />
+            </div>
+        )
     }
 }
 
