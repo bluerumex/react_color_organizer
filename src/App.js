@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { v4 } from 'uuid';
 import ColorList from './component/ColorList';
 import AddColorForm from './component/AddColorForm';
+import MemberList from './component/MemberList';
 import './stylesheets/App.scss';
 
 class App extends Component {
@@ -56,6 +57,7 @@ class App extends Component {
             <div className="app">
                 <AddColorForm onNewColor={_addColor} />
                 <ColorList colors={colors} onRate={_rateColor} onRemove={_removeColor} />
+                <MemberList count={5} />
             </div>
         )
     }
