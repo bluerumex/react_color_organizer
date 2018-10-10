@@ -59,7 +59,7 @@ class App extends Component {
                 <ColorList colors={colors} onRate={_rateColor} onRemove={_removeColor} />
                 <MemberList count={5} />
             </div>
-        )
+        ) 
     }
 }
 
