@@ -43,7 +43,7 @@ class MemberList extends Component {
     }
 
     componentWillUpdate() {
-        console.log('갱신 생애주기');
+        // console.log('갱신 생애주기');
     }
     
     render() {

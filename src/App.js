@@ -3,6 +3,7 @@ import { v4 } from 'uuid';
 import ColorList from './component/ColorList';
 import AddColorForm from './component/AddColorForm';
 import MemberList from './component/MemberList';
+import HiddenMessages from './component/HiddenMessages';
 import './stylesheets/App.scss';
 
 class App extends Component {
@@ -27,7 +28,7 @@ class App extends Component {
             }
         ]
         this.setState({colors});
-        console.log(colors);
+        // console.log(colors);
     }
 
     _rateColor(id, rating) {
@@ -57,6 +58,7 @@ class App extends Component {
             <div className="app">
                 <AddColorForm onNewColor={_addColor} />
                 <ColorList colors={colors} onRate={_rateColor} onRemove={_removeColor} />
+                <HiddenMessages />
                 <MemberList count={5} />
             </div>
         ) 
