@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import fetch from 'isomorphic-fetch';
+import v4 from 'uuid';
 
 class CountryList extends Component {
 
@@ -31,7 +32,7 @@ class CountryList extends Component {
                     <div>나라 이름이 없습니다</div> :
                     <ul>
                         {countryNames.map(
-                            (x,i) => <li key={i}>{x}</li>
+                            (x,i) => <li key={v4()}>{x}</li>
                         )}
                     </ul>
         );
