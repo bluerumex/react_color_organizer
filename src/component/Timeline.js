@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from "d3";
+import { v4 } from 'uuid';
 
 const Canvas = ({children}) => {
     return (
@@ -11,7 +12,7 @@ const Canvas = ({children}) => {
 
 const TimelineDot = ({position, txt}) => {
     return (
-        <g transform={`translate(${position}, 0)`}>
+        <g id={v4()} transform={`translate(${position}, 0)`}>
             <circle cy={160}
                     r={5}
                     style={{fill: 'blue'}} />

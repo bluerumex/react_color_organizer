@@ -5,9 +5,10 @@ import AddColorForm from './component/AddColorForm';
 import MemberList from './component/MemberList';
 import HiddenMessages from './component/HiddenMessages';
 import CountryList from './component/CountryList';
-import Timeline from './component/Timeline';
+// import Timeline from './component/Timeline';
+import PeopleList from './component/PeopleList';
 import './stylesheets/App.scss';
-import historicDatesForSkiing from './data/Skiing';
+// import historicDatesForSkiing from './data/Skiing';
 
 class App extends Component {
     constructor(props) {
@@ -61,10 +62,11 @@ class App extends Component {
             <div className="app">
                 <AddColorForm onNewColor={_addColor} />
                 <ColorList colors={colors} onRate={_rateColor} onRemove={_removeColor} />
-                <Timeline name='스키의 역사' data={historicDatesForSkiing} />
+                {/* <Timeline name='스키의 역사' data={historicDatesForSkiing} /> */}
                 <HiddenMessages />
                 <MemberList count={1} />
                 <CountryList />
+                <PeopleList />
             </div>
         ) 
     }
