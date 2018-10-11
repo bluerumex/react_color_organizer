@@ -4,6 +4,7 @@ import ColorList from './component/ColorList';
 import AddColorForm from './component/AddColorForm';
 import MemberList from './component/MemberList';
 import HiddenMessages from './component/HiddenMessages';
+import CountryList from './component/CountryList';
 import './stylesheets/App.scss';
 
 class App extends Component {
@@ -59,7 +60,8 @@ class App extends Component {
                 <AddColorForm onNewColor={_addColor} />
                 <ColorList colors={colors} onRate={_rateColor} onRemove={_removeColor} />
                 <HiddenMessages />
-                <MemberList count={5} />
+                <MemberList count={1} />
+                <CountryList />
             </div>
         ) 
     }
