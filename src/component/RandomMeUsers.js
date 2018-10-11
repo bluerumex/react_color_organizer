@@ -4,7 +4,7 @@ import fetch from 'isomorphic-fetch';
 const PeopleList = ({data}) => {
     return (
         <ol className='people-list'>
-            {data.results.map((person, i) => {
+            {data.map((person, i) => {
                 const { first, last } = person.name;
                 return <li key={i}>{first} {last}</li>
             })}
@@ -25,8 +25,9 @@ const DataComponent = (ComposedComponent, url) => {
             }
         
             componentWillMount() {
+                const { count } = this.props;
                 this.setState({loading: true});
-                fetch('https://randomuser.me/api/?results=10')
+                fetch(`${url}/?results=${count}`)
                     .then(res => res.json())
                     .then(obj => obj.results)
                     .then(data => this.setState({
@@ -46,14 +47,13 @@ const DataComponent = (ComposedComponent, url) => {
                     </div>
                 )
             }
-
         }
     )
 }
 
-const Randomuser = DataComponent(
+const RandomMeUsers = DataComponent(
     PeopleList,
-    'https://randomuser.me/api/'
+    'https://randomuser.me/api/',
 );
 
-export default Randomuser
+export default RandomMeUsers
