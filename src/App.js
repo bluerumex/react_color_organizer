@@ -7,6 +7,7 @@ import HiddenMessages from './component/HiddenMessages';
 import CountryList from './component/CountryList';
 // import Timeline from './component/Timeline';
 import PeopleList from './component/PeopleList';
+import RandomMeUsers from './component/RandomMeUsers';
 import './stylesheets/App.scss';
 // import historicDatesForSkiing from './data/Skiing';
 
@@ -67,6 +68,7 @@ class App extends Component {
                 <MemberList count={1} />
                 <CountryList />
                 <PeopleList />
+                <RandomMeUsers count={5} />
             </div>
         ) 
     }
