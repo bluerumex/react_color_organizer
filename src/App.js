@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import { unmountComponentAtNode } from 'react-dom';
 import { v4 } from 'uuid';
 import ColorList from './component/ColorList';
 import AddColorForm from './component/AddColorForm';
@@ -8,8 +9,9 @@ import AddColorForm from './component/AddColorForm';
 // import Timeline from './component/Timeline';
 // import PeopleList from './component/PeopleList';
 // import RandomMeUsers from './component/RandomMeUsers';
-import CountryDropDown from './component/CountryDropDown';
-import ExpandableHiddenMessage from './component/ExpandableHiddenMessage';
+// import CountryDropDown from './component/CountryDropDown';
+// import ExpandableHiddenMessage from './component/ExpandableHiddenMessage';
+// import Clock from './component/Clock';
 import './stylesheets/App.scss';
 // import historicDatesForSkiing from './data/Skiing';
 
@@ -72,9 +74,10 @@ class App extends Component {
                 <CountryList />
                 <PeopleList />
                 <RandomMeUsers count={5} />
-                */}
                 <CountryDropDown selected='United States' />
                 <ExpandableHiddenMessage hidden={true}>이 메시지는 처음에 숨겨져 있습니다.</ExpandableHiddenMessage>
+                <Clock onClose={() => unmountComponentAtNode(document.getElementById('react-container'))} />
+                */}
             </div>
         ) 
     }
