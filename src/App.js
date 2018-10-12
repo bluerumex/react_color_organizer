@@ -9,6 +9,7 @@ import AddColorForm from './component/AddColorForm';
 // import PeopleList from './component/PeopleList';
 // import RandomMeUsers from './component/RandomMeUsers';
 import CountryDropDown from './component/CountryDropDown';
+import ExpandableHiddenMessage from './component/ExpandableHiddenMessage';
 import './stylesheets/App.scss';
 // import historicDatesForSkiing from './data/Skiing';
 
@@ -73,6 +74,7 @@ class App extends Component {
                 <RandomMeUsers count={5} />
                 */}
                 <CountryDropDown selected='United States' />
+                <ExpandableHiddenMessage hidden={true}>이 메시지는 처음에 숨겨져 있습니다.</ExpandableHiddenMessage>
             </div>
         ) 
     }
