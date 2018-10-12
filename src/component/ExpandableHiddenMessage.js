@@ -12,16 +12,16 @@ const Expandable = ComposedComponent =>
                 true:
                 false;
             this.state = {collapsed};
-            this.expandCollapse = this.expandCollapse.bind(this);
+            this._expandCollapse = this._expandCollapse.bind(this);
         }
     
-        expandCollapse() {
+        _expandCollapse() {
             let collapsed = !this.state.collapsed;
             this.setState({collapsed});
         }
         
         render() {
-            return <ComposedComponent expandCollapse={this.expandCollapse} {...this.state} {...this.props} />
+            return <ComposedComponent expandCollapse={this._expandCollapse} {...this.state} {...this.props} />
         }
     
     }
