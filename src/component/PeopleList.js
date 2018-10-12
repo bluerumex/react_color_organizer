@@ -25,7 +25,7 @@ class PeopleList extends Component {
     }
 
     render() {
-        const { data, loading, loaded } = this.state;
+        const { data, loading } = this.state;
         return ( (loading) ?
             <div>데이터 로딩 중...</div> :
             <ol className='people-list'>
