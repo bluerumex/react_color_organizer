@@ -1,3 +1,4 @@
+/* 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Dispatcher from 'flux';
@@ -85,3 +86,4 @@ store.on('RESET', () => render(store.count));
 render(store.count);
 
 export default Countdown;
+*/
