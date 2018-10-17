@@ -1,5 +1,5 @@
-import C from'../../../src/component/constant'
-import { color } from '../../../src/store/color_reducers'
+import C from '../../../components/constant'
+import { color } from '../../../store/color_reducers'
 
 describe("color 리듀서", () => {
     it("ADD_COLOR 성공", () => {
@@ -14,7 +14,7 @@ describe("color 리듀서", () => {
         const results = color(state, action)
         
         expect(results)
-            .toEquals({
+            .toEqual({
                 id: 0,
                 title: 'Test Teal',
                 color: '#90C3D4',
@@ -38,7 +38,7 @@ describe("color 리듀서", () => {
         }
         const results = color(state, action);
         expect(results)
-            .toEquals({
+            .toEqual({
                 id: 0,
                 title: 'Test Teal',
                 color: '#90C3D4',
