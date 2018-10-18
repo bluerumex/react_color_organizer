@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import { unmountComponentAtNode } from 'react-dom';
 import { v4 } from 'uuid';
-import ColorList from './component/ColorList';
-import AddColorForm from './component/AddColorForm';
+import ColorList from './components/ColorList';
+import AddColorForm from './components/AddColorForm';
 // import MemberList from './component/MemberList';
 // import HiddenMessages from './component/HiddenMessages';
 // import CountryList from './component/CountryList';
@@ -12,7 +12,7 @@ import AddColorForm from './component/AddColorForm';
 // import CountryDropDown from './component/CountryDropDown';
 // import ExpandableHiddenMessage from './component/ExpandableHiddenMessage';
 // import Clock from './component/Clock';
-import './stylesheets/App.scss';
+// import './stylesheets/App.scss';
 // import historicDatesForSkiing from './data/Skiing';
 
 class App extends Component {

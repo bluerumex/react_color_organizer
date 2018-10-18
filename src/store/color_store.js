@@ -11,6 +11,7 @@ const logger = store => next => action => {
     result = next(action);
     console.log('다음 상태', store.getState());
     console.groupEnd();
+    return result;
 }
 
 const saver = store => next => action => {

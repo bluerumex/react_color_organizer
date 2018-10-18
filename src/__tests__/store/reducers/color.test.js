@@ -1,5 +1,6 @@
 import C from '../../../components/constant'
 import { color } from '../../../store/color_reducers'
+import deepFreeze from 'deep-freeze';
 
 describe("color 리듀서", () => {
     it("ADD_COLOR 성공", () => {
@@ -11,6 +12,8 @@ describe("color 리듀서", () => {
             color: '#90C3D4',
             timestamp: new Date().toString()
         }
+        deepFreeze(state);
+        deepFreeze(action);
         const results = color(state, action)
         
         expect(results)
@@ -36,7 +39,10 @@ describe("color 리듀서", () => {
             id: 0,
             rating: 3
         }
+        deepFreeze(state);
+        deepFreeze(action);
         const results = color(state, action);
+        
         expect(results)
             .toEqual({
                 id: 0,
