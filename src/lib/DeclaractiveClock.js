@@ -6,7 +6,7 @@ const getCurrentTime = () => new Date()
 // const clear = () => console.clear()
 // const log = message => console.log(message)
 
-const abstractClockTime = date =>
+const abstractClockTime = date => 
     ({
         hours: date.getHours(),
         minutes: date.getMinutes(),
